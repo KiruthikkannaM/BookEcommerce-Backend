@@ -10,13 +10,16 @@ var MAX_LENGTH_PASSWORD=16;
 
 const app=express();
 app.use(cors());
-const db=new pg.Client({
-    user: "postgres",
-    host: "localhost",
-    database: "Book e commerce",
-    password: "kiruthik_7275",
-    port: 5432,
+// const db=new pg.Client({
+//     user: "postgres",
+//     host: "localhost",
+//     database: "Book e commerce",
+//     password: "kiruthik_7275",
+//     port: 5432,
 
+// });
+const db = new pg.Client({
+    connectionString: 'postgresql://postgres.yoxouotutdshgigofdlr:Kiruthik_1105@aws-0-ap-south-1.pooler.supabase.com:6543/postgres'
 });
 db.connect();
 app.use(bodyparser.json());
